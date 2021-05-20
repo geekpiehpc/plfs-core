@@ -32,8 +32,8 @@ bool mss::mlog_oss::getNoLog() {
     return noLog;
 }
 
-void mss::mlog_oss::insert_os(const std::ostream& xin) {
-    oss << xin;
+void mss::mlog_oss::insert_os(char xin) {
+    oss << reinterpret_cast<char>(xin);
 }
 
 /*

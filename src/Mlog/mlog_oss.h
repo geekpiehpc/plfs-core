@@ -25,7 +25,7 @@ namespace mss {
                 oss << xin;
             } 
             
-            void insert_os(const std::ostream& in);
+            void insert_os(char in);
 
             std::string str();
 

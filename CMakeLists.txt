@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.11)
 
 #default to Release build if not specified
 #This is before the project(plfs) invocation to allow it to be cached
@@ -10,6 +10,7 @@ endif()
 #begin plfs project
 project(plfs)
 
+set (CMAKE_CXX_FLAGS "-Wno-error=deprecated-declarations -Wno-error=parentheses -Wno-error=catch-value= -Wno-error=implicit-fallthrough= -Wno-error=delete-non-virtual-dtor")
 #set project number X.X.X?
 set (plfs_VERSION_MAJOR 2)
 set (plfs_VERSION_MINOR 5)
@@ -207,7 +208,7 @@ SET(SRCDIR ${plfs_src_dir} ${iostore} ${iostore_glib} ${iostore_hdfs}
 )
 
 #setup custom destination paths here so all targets will either be 
-#defined here or overridden by the user
+#defined here or overriddenf by the user
 if (CMAKE_INSTALL_PREFIX)
     message ("-- CMAKE_INSTALL_PREFIX set to ${CMAKE_INSTALL_PREFIX}")
 endif(CMAKE_INSTALL_PREFIX)

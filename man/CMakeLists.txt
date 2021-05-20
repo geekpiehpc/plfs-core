@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.11)
 
 
 #setup definitions
@@ -113,9 +113,3 @@ foreach (MAN3 plfs is_plfs_path plfs_chown plfs_flatten_index plfs_mode
               plfs_flush_writes plfs_invalidate_read_cache )
     configure_file( "man3/${MAN3}.3in" "${PLFS_BUILD_DIR}/share/man/man3/${MAN3}.3")
 endforeach(MAN3)
-
-#man5
-configure_file( "man5/plfsrc.5in" "${PLFS_BUILD_DIR}/share/man/man5/plfsrc.5")
-
-#man7
-configure_file( "man7/plfs.7in" "${PLFS_BUILD_DIR}/share/man/man7/plfs.7")
